@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+  "name": "Remote Containers Test",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "phoenix",
+  "workspaceFolder": "/workspaces/remote-containers-test",
+  "settings": {
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+  },
+  "extensions": [
+    "JakeBecker.elixir-ls",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "adrianwilczynski.alpine-js-intellisense",
+    "ms-azuretools.vscode-docker",
+    "stylelint.vscode-stylelint"
+  ],
+  "forwardPorts": [4000]
+}
