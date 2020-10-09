@@ -1,6 +1,6 @@
-FROM elixir:1.10.4-slim
+FROM 1.11.0-erlang-22.3.3-ubuntu-focal-20200423
 
-ARG USERNAME=vscode
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y postgresql-client && \
