@@ -5,9 +5,11 @@
   "name": "Remote Containers Test",
   "dockerComposeFile": ["docker-compose.yml"],
   "service": "phoenix",
-  "workspaceFolder": "/workspaces/remote-containers-test",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
+  "workspaceFolder": "/workspace",
   "settings": {
-    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "editor.formatOnSave": true
   },
   "extensions": [
     "JakeBecker.elixir-ls",
