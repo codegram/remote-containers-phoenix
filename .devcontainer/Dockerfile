@@ -1,6 +1,6 @@
-FROM 1.11.0-erlang-22.3.3-ubuntu-focal-20200423
+FROM hexpm/elixir:1.11.0-erlang-22.3.3-ubuntu-focal-20200423
 
-ARG DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y postgresql-client && \
